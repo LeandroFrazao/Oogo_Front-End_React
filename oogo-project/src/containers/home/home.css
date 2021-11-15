@@ -1,0 +1,45 @@
+.oogo__home {
+  display: flex;
+  flex-direction: row;
+}
+.oogo__home-content {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+}
+.oogo__home-content button {
+  margin: 2rem;
+  min-height: 50px;
+  min-width: 200px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  background: #00aaf8;
+  border: 2px solid #feffd6;
+  padding: 0 2rem;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 5px;
+}
+
+@media screen and (max-width: 1050px) {
+  .oogo__home {
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .oogo__home {
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 490px) {
+}
