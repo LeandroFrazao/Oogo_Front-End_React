@@ -1,19 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Footer, Body, Header } from "./containers";
-import { Navbar, Profiles, Application } from "./components";
+import { Navbar } from "./components";
 
 import "./App.css";
-import profiles from "./components/profiles/Profiles";
 
-const App = () => {
+const App = ({ pageName }) => {
+  const [page, setPage] = useState(pageName);
+
   return (
     <div className="App">
       <div className="gradient__bg">
-        <Navbar />
+        <Navbar setPage={setPage} page={page} />
         <Header />
       </div>
-      <Body />
+      <Body setPage={setPage} page={page} />
 
       <Footer />
     </div>

@@ -55,8 +55,7 @@
 
   margin-right: auto;
   margin-left: auto;
-
-  padding: 10rem 0rem;
+  padding: 0rem 0rem;
 }
 
 @media screen and (max-width: 850px) {

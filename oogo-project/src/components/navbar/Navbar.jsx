@@ -2,23 +2,36 @@ import React, { useState } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import "./navbar.css";
 import logo from "../../assets/oogo-logo.svg";
+import { NavLink } from "react-router-dom";
 
-const Menu = () => (
-  <>
-    <p>
-      <a href="#home">Home</a>
-    </p>
-    <p>
-      <a href="#application">Application</a>
-    </p>
-    <p>
-      <a href="#profiles">Profiles</a>
-    </p>
-  </>
-);
-
-const Navbar = () => {
+const Navbar = ({ setPage, page }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
+
+  const Menu = (props) => (
+    <>
+      <nav>
+        <p>
+          <NavLink to="/" onClick={() => setPage("home")}>
+            Home
+          </NavLink>
+        </p>
+      </nav>
+      <nav>
+        <p>
+          <NavLink to="/application" onClick={() => setPage("application")}>
+            Application
+          </NavLink>
+        </p>
+      </nav>
+      <nav>
+        <p>
+          <NavLink to="/profiles" onClick={() => setPage("profiles")}>
+            Profiles
+          </NavLink>
+        </p>
+      </nav>
+    </>
+  );
 
   return (
     <div className="oogo__navbar">
@@ -27,7 +40,7 @@ const Navbar = () => {
           <img src={logo} alt="logo" />
         </div>
         <div className="oogo__navbar-links_container">
-          <Menu />
+          <Menu props={page} />
         </div>
         <div className="oogo__navbar-menu">
           {toggleMenu ? (
@@ -46,7 +59,7 @@ const Navbar = () => {
           {toggleMenu && (
             <div className="oogo__navbar-menu_container scale-up-center">
               <div className="oogo__navbar-menu_container-links">
-                <Menu />
+                <Menu props={page} />
               </div>
             </div>
           )}

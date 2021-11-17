@@ -1,0 +1,117 @@
+.oogo__experience {
+  margin: 0;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: row;
+  height: 22rem;
+  max-width: 80rem;
+}
+
+.oogo__experience_content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 20px;
+}
+
+.oogo__experience_content p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-text);
+
+  margin-top: 1.5rem;
+}
+.oogo__experience_content h2 {
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -0.04em;
+}
+.oogo__experience_content h3 {
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+}
+.oogo__experience_form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.oogo__experience_form div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  font-family: var(--font-family);
+  padding: 1rem 0;
+}
+
+.oogo__experience_form input[type="text"],
+select {
+  padding: 12px 20px;
+  margin: 8px 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.oogo__experience_form input[type="submit"] {
+  width: 100%;
+  background-color: #4c95af;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.oogo__experience_form input[type="submit"]:hover {
+  background-color: #627477;
+}
+.oogo__experience_form-input label {
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+  padding-left: 1rem;
+}
+
+@media screen and (max-width: 1050px) {
+  .oogo__experience-content {
+    margin: 0 0 3rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .oogo__experience {
+    flex-direction: column;
+  }
+  .oogo__experience-content h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .oogo__experience-content p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .oogo__experience-content h1 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}

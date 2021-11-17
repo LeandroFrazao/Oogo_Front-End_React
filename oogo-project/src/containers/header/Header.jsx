@@ -13,7 +13,7 @@ const Header = () => {
       </div>
 
       <div className="oogo__header-image">
-        <img src={logo_hero} />
+        <img src={logo_hero} alt="logo_hero" />
       </div>
     </div>
   );
