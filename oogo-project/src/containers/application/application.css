@@ -7,7 +7,10 @@
   margin-left: auto;
   padding: 0rem 0rem;
 }
-
+.oogo__application-forms {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+}
 .oogo__application_content {
   display: flex;
   flex-direction: row;
@@ -55,7 +58,7 @@
   justify-items: flex-end;
 }
 
-.oogo__application-input input {
+.oogo__application-input input[type="submit"] {
   background-color: #4c95af;
   color: white;
   padding: 14px 20px;
@@ -79,11 +82,20 @@
   .oogo__application_content {
     flex-direction: column;
   }
+  .oogo__application-navigation-previous,
+  .oogo__application-navigation-next {
+    width: 0.1rem;
+  }
 }
 
 @media screen and (max-width: 490px) {
   .oogo__application-content h1 {
     font-size: 20px;
     line-height: 28px;
+  }
+  .oogo__application-navigation {
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
   }
 }

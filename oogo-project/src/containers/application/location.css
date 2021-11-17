@@ -1,7 +1,5 @@
 .oogo__location {
   margin: 0;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: scroll;
   display: flex;
   flex-direction: row;
   height: 22rem;
@@ -64,26 +62,22 @@ select {
   box-sizing: border-box;
 }
 
-.oogo__location_form input[type="submit"] {
-  width: 100%;
-  background-color: #4c95af;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.oogo__location_form input[type="submit"]:hover {
-  background-color: #627477;
-}
 .oogo__location_form-input label {
   color: var(--color-text);
   font-family: var(--font-family);
   font-weight: 800;
   font-size: 16px;
   line-height: 40px;
+  letter-spacing: -0.02em;
+  padding-left: 1rem;
+}
+
+.oogo__location_form-input p {
+  color: red;
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 8px;
+  line-height: 0px;
   letter-spacing: -0.02em;
   padding-left: 1rem;
 }

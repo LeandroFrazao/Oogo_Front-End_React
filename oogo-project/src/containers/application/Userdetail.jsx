@@ -1,7 +1,7 @@
 import React from "react";
 import "./userdetail.css";
-const Userdetail = ({ data, update }) => {
-  const { name, typeService } = data;
+
+const Userdetail = ({ data, update, register, errors }) => {
   return (
     <div className="oogo__userdetail">
       <div className="oogo__userdetail_content">
@@ -14,28 +14,38 @@ const Userdetail = ({ data, update }) => {
         </p>
       </div>
       <div className="oogo__userdetail_form">
-        <form action="#">
-          <div className="oogo__userdetail_form-input">
-            <label>What should we call you?</label>
-            <input
-              type="text"
-              id="firstName"
-              name="name"
-              placeholder="e.g. Wally Michael"
-              value={name}
-              onChange={update("name")}
-            />
-            <label>Type of service</label>
-            <input
-              type="text"
-              id="typeService"
-              name="typeService"
-              placeholder="e.g. Activity Based Childcare"
-              value={typeService}
-              onChange={update("typeService")}
-            />
-          </div>
-        </form>
+        <div className="oogo__userdetail_form-input">
+          <label>What should we call you?</label>
+          <input
+            type="text"
+            id="firstName"
+            name="name"
+            placeholder="e.g. Wally Michael"
+            {...register("name", {
+              required: {
+                value: true,
+                message: "Please type your name",
+              },
+            })}
+            onChange={update("name")}
+          />
+          {errors.name && <p>{errors.name.message}</p>}
+          <label>Type of service</label>
+          <input
+            type="text"
+            id="typeService"
+            name="typeService"
+            placeholder="e.g. Activity Based Childcare"
+            {...register("typeService", {
+              required: {
+                value: true,
+                message: "Please enter your service type",
+              },
+            })}
+            onChange={update("typeService")}
+          />
+          {errors.typeService && <p>{errors.typeService.message}</p>}
+        </div>
       </div>
     </div>
   );

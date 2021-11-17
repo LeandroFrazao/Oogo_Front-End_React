@@ -1,7 +1,5 @@
 .oogo__uploadFiles {
   margin: 0;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: scroll;
   display: flex;
   flex-direction: row;
   height: 22rem;
@@ -73,8 +71,20 @@ select {
   letter-spacing: -0.02em;
   padding-left: 1rem;
 }
+.oogo__uploadFiles_form-input p {
+  color: red;
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 8px;
+  line-height: 0px;
+  letter-spacing: -0.02em;
+  padding-left: 1rem;
+}
 
 @media screen and (max-width: 1050px) {
+  .oogo__uploadFiles {
+    width: auto;
+  }
   .oogo__uploadFiles-content {
     margin: 0 0 3rem;
   }
